@@ -1,0 +1,9 @@
+#! /bin/sh
+
+hyprctl keyword windowrulev2 "workspace 10 silent,class:(org.wezfurlong.wezterm)" && hyprctl dispatch exec "wezterm"
+hyprctl keyword windowrulev2 "workspace 1 silent,class:(firefox)" && hyprctl dispatch exec "firefox"
+
+sleep 15
+
+hyprctl keyword windowrulev2 "unset,class:(org.wezfurlong.wezterm)"
+hyprctl keyword windowrulev2 "unset,class:(firefox)"
