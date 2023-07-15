@@ -21,4 +21,4 @@ eww = { source = "eww", target = ".config/eww" }
 
 wezterm = { source = "wezterm", target = ".config/wezterm" }
 
-nvim = { source = "nvim", target = ".config/nvim" }
+nvim = { source = "nvchad-custom", target = ".config/nvim/lua/custom" }
