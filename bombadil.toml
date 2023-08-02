@@ -8,16 +8,16 @@ dotfiles_dir = "code/dotfiles"
 vars = [ "vars.toml" ]
 
 # Array of post install shell commands
-posthooks = [ "hyprctl reload", "eww close-all; eww open bar" ]
+# posthooks = [ "hyprctl reload", "eww close-all; eww open bar" ]
 
 [settings.dots]
 
 # Dot entry representing a symlink, `source` is relative to `dotfiles_dir`
 # and `target` shall be relative to $HOME directory or absolute.
 
-hypr = { source = "hypr", target = ".config/hypr" }
+# hypr = { source = "hypr", target = ".config/hypr" }
 
-eww = { source = "eww", target = ".config/eww" }
+# eww = { source = "eww", target = ".config/eww" }
 
 wezterm = { source = "wezterm", target = ".config/wezterm" }
 
