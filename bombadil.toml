@@ -22,3 +22,5 @@ vars = [ "vars.toml" ]
 wezterm = { source = "wezterm", target = ".config/wezterm" }
 
 nvim = { source = "lazyvim", target = ".config/nvim" }
+
+starship = { source = "starship.toml", target = ".config/starship.toml" }
