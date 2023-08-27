@@ -9,18 +9,25 @@ vars = [ "vars.toml" ]
 
 # Array of post install shell commands
 # posthooks = [ "hyprctl reload", "eww close-all; eww open bar" ]
+posthooks = ["echo \"Updating dots\""]
 
 [settings.dots]
-
 # Dot entry representing a symlink, `source` is relative to `dotfiles_dir`
 # and `target` shall be relative to $HOME directory or absolute.
 
 # hypr = { source = "hypr", target = ".config/hypr" }
-
 # eww = { source = "eww", target = ".config/eww" }
-
+nvim = { source = "lazyvim", target = ".config/nvim" }
+starship = { source = "starship.toml", target = ".config/starship.toml" }
+tmux = { source = "tmux", target = ".config/tmux" }
 wezterm = { source = "wezterm", target = ".config/wezterm" }
 
-nvim = { source = "lazyvim", target = ".config/nvim" }
+[profiles.wsl]
+vars = [ "vars-wsl.toml" ]
+posthooks = [
+  "cp /home/jessrobe/.config/wezterm/ /mnt/c/Users/jrobertson/.config/ -r",
+  "echo \"Updating dots\"",
+]
 
-starship = { source = "starship.toml", target = ".config/starship.toml" }
+[profiles.wsl.dots]
+# wezterm = { source = "wezterm/wezterm-wsl.lua", target = ".config/wezterm/wezterm.lua" }
